@@ -1,0 +1,14 @@
+backend/.env
+backend/.env.*
+!backend/.env.example
+deploy/.env.ec2
+secrets/*
+!secrets/README.md
+private-face-model/**
+!private-face-model/README.md
+*.pem
+*.key
+*.onnx
+*.p12
+*.pfx
+*.log
