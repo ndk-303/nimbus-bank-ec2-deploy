@@ -4,7 +4,7 @@ Hướng dẫn này chạy **backend Node.js và Face API** bằng image đã bu
 
 Repository này chỉ chứa cấu hình triển khai, không chứa source backend/Face API, Docker images, credentials hoặc model. Clone repository vào `/srv/nimbus` trên EC2. Các image phải được build từ repository source `nimbus-bank-android` và push lên Docker Hub trước.
 
-Image mặc định cho EC2 x86_64 được build từ source commit `46db7981a485`: `khoadev303/nimbus-backend:46db7981a485` và `khoadev303/nimbus-face-api:46db7981a485`. Khi cập nhật source, build và push tag mới theo mục 2, sau đó đổi image tag trên EC2.
+Image mặc định cho EC2 x86_64 là `khoadev303/nimbus-backend:v2` và `khoadev303/nimbus-face-api:v2`. Images được build từ source commit `79979f366e80`; image backend còn dùng thay đổi Dockerfile sang Node 24 để đáp ứng yêu cầu của Firebase dependencies. Khi cập nhật source, build và push tag mới (`v3`, `v4`...), sau đó đổi image tag trên EC2.
 
 Máy 1 GB RAM + 2 GB swap chỉ phù hợp thử nghiệm tải thấp; chưa có kết quả đo chứng minh đủ bộ nhớ cho model và traffic của bạn. Theo dõi RAM, swap và tình trạng container khi chạy thực tế.
 
